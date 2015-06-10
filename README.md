@@ -1,4 +1,4 @@
-# BRANDI WILSON + KYNA NGUYEN -- Task List
+# Corinne Pingul and Lindsey Reno 
 
 We are going to use our new found knowledge of databases and web development to create a task list, powered by Sinatra and SQLite. This project will enable us to keep track of and persist, add, edit and remove tasks.
 
