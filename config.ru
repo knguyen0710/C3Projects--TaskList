@@ -1,2 +1,2 @@
-require './TaskList'
-run TaskList
+require './my-site'
+run MySite
