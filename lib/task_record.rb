@@ -8,28 +8,17 @@ module TaskList
     end
 
     def your_custom_query_here(*args)
-      # args = [{"name"=>"B", "description"=>"D", "date"=>"C"}]
-      # args[0] = {"name"=>"B", "description"=>"D", "date"=>"C"}
-      # @name = args[0]["name"]
-      # @description = args[0]["description"]
-      # @date = args[0]["date"]
-
       @name = args[0]
       @description = args[1]
       @date = args[2]
-
-      # statement = "INSERT INTO data (name, description, date) VALUE (#{@name}, #{@description}, #{@date});"
-      statement = "INSERT INTO data(name, description, date) VALUES (\"#{@name}\", \"#{@description}\", \"#{@date}\");"
-
+      statement = "INSERT INTO data(name, description, date) VALUES
+                  (\"#{@name}\", \"#{@description}\", \"#{@date}\");"
+      check_input
       query!(statement)
+    end
 
-      # santitize/validate your arguments
-
-      # prepare your statement
-
-      # call `query!` to interact with the database
-
-      # determine what should be returned
+    def check_input
+      raise ArgumentError, "Must input name" if @name.length == 0
     end
 
   end

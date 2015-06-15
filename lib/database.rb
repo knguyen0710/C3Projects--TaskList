@@ -8,7 +8,7 @@ module TaskList
       @database_name = "db/#{ database_name }"
     end
 
-    def your_custom_query_here1(*args)
+    def your_custom_query_here(*args)
       # santitize/validate your arguments
 
       # prepare your statement
@@ -24,9 +24,7 @@ module TaskList
       db = SQLite3::Database.open database_name
       db.execute statement, params
     rescue SQLite3::Exception => error
-      raise error
-      # use this block to recover from an error
-      # consider giving the user a special message back
+        puts "Fatal error!!"
       # inspect the `error` object for information about the error
     ensure
       db.close if db

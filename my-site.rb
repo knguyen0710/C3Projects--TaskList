@@ -25,13 +25,9 @@ class MySite < Sinatra::Base
 
     @name = params[:name]
     @description = params[:description]
-    @date = params[:date]
+    @date = params[:date]      
+
     @database_object.your_custom_query_here(@name, @description, @date)
-
-    # @database_object.your_custom_query_here(params)
-
-    #task_object = TaskList::TaskRecord.new("taskList.db")
-    #task_object.your_custom_query_here(ARGUMENTS)
     redirect "/"
   end
 

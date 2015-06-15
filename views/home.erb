@@ -1,5 +1,24 @@
-<% @tasks.each do |task|%>
-<%= task %>
-<% end %>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styling.css">
+</head>
+<body>
+<table>
+  <thead>Task List</thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Date</th>
+  </tr>
+  <% @tasks.each do |task|%>
+  <tr>
+    <td><%= task[0] %></td>
+    <td><%= task[1] %></td>
+    <td><%= task[2] %></td>
+    <td><%= task[3] %></td>
+  </tr>
+  <% end %>
 
+</table>
 <p><a href="/add">ADD TASK</a></p>
+</body>
